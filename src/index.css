@@ -1,0 +1,36 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+button,
+input,
+textarea {
+  all: unset;
+  cursor: pointer;
+}
+
+body {
+  background: rgb(16, 22, 31);
+  font-family: system-ui, sans-serif;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}

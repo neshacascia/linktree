@@ -1,0 +1,77 @@
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  margin: 40px 0 40px 0;
+  gap: 40px;
+}
+
+.header-img {
+  background: rgba(54, 64, 80, 0.398);
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 30px;
+  object-position: 46%;
+}
+
+.header-text {
+  color: #8ea9a8;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: end;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+span {
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  color: #8ea9a8;
+  width: 340px;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border: 2px solid #8ea9a8;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.btn:hover {
+  color: rgb(16, 22, 31);
+  background: #8ea9a8;
+}
+
+.spotify-card {
+  background: rgba(54, 64, 80, 0.398);
+  height: 150px;
+  width: 340px;
+  border-radius: 30px;
+  margin-top: 20px;
+}
