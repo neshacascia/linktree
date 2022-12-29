@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import socialLinks from './socialLinksData';
 import Header from './components/Header';
 import Button from './components/Button';
@@ -6,15 +6,26 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  function toggleDarkMode() {
+    setIsDarkMode(prevState => !prevState);
+  }
+
   const buttons = socialLinks.map(item => (
-    <Button site={item.site} href={item.href} key={item.id} />
+    <Button
+      theme={isDarkMode}
+      site={item.site}
+      href={item.href}
+      key={item.id}
+    />
   ));
-  console.log(buttons);
+
   return (
-    <section>
-      <Header />
+    <section className={`app ${isDarkMode ? '' : 'light'}`}>
+      <Header theme={isDarkMode} handleClick={toggleDarkMode} />
       {buttons}
-      <Footer />
+      <Footer theme={isDarkMode} />
     </section>
   );
 }

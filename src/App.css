@@ -1,15 +1,24 @@
-section {
+.app {
+  background: rgb(16, 22, 31);
   height: 100vh;
-  display: flex;
+  width: 100vw;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  place-items: center;
 }
 
+.app.light {
+  background: #dae1e1;
+}
+
+/* Header Styles */
 header {
   height: 150px;
   display: flex;
   align-items: center;
-  margin: 40px 0 40px 0;
+  margin: 40px 0 60px 0;
   gap: 40px;
 }
 
@@ -29,6 +38,11 @@ header {
   flex-direction: column;
   gap: 25px;
   text-align: end;
+  align-items: flex-end;
+}
+
+.header-text.light {
+  color: #232d42;
 }
 
 h1 {
@@ -43,6 +57,81 @@ span {
   letter-spacing: 0.02em;
 }
 
+/* Toggle Styles */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggler {
+  width: 48px;
+  height: 24px;
+  position: relative;
+  display: inline-block;
+}
+
+.toggler input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(54, 64, 80, 0.398);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  right: 4px;
+  bottom: 4px;
+  background-color: #8ea9a8;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider.light:before {
+  background-color: #2a3753;
+}
+
+input:checked + .slider {
+  background-color: rgba(54, 64, 80, 0.398);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgba(54, 64, 80, 0.398);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(-24px);
+  -ms-transform: translateX(-24px);
+  transform: translateX(-24px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggle-icons {
+  font-size: 1.4rem;
+}
+
+/* Links Styles */
 .btn-container {
   width: 100%;
   display: flex;
@@ -63,15 +152,41 @@ span {
   padding: 10px 0;
 }
 
+.btn.light {
+  color: #2a3753;
+  border: 2px solid #2a3753;
+}
+
 .btn:hover {
   color: rgb(16, 22, 31);
   background: #8ea9a8;
 }
 
-.spotify-card {
+.btn.light:hover {
+  color: #ebe9e9;
+  background: #2a3753;
+}
+
+/* Footer Styles */
+footer {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+h4 {
+  color: #8ea9a8;
+  font-size: 1.4rem;
+}
+
+h4.light {
+  color: #2a3753;
+}
+
+/* .spotify-card {
   background: rgba(54, 64, 80, 0.398);
   height: 150px;
   width: 340px;
   border-radius: 30px;
   margin-top: 20px;
-}
+} */
